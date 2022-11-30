@@ -23,7 +23,10 @@ html, body {
 .menu {
     width: 100vw;
     height: auto;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    background-color: var(--dark);
+    z-index: 99;
 }
 
 .marquee {
@@ -52,7 +55,13 @@ html, body {
     text-decoration: none;
     font-family: 'Telegraf-Regular';
     color: var(--light);
-    font-size: 7.5vw;
+    font-size: 6vw;
+    opacity: .5;
+}
+
+.active {
+    /* border-bottom: solid 1px var(--light); */
+    opacity: 1;
 }
 
 @media screen and (min-width: 750px) {
@@ -65,7 +74,7 @@ html, body {
     }
     
     .ticker {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
     
     .nav {

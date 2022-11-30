@@ -18,8 +18,169 @@ html, body {
 :root {
     --dark: #0F0E0E;
     --light: #FFFFF0;
+    --button: rgba(255, 255, 240, .25)
 }
 
-@media screen and (min-width: 750px) {
+.work {
 
+}
+
+.case {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    border-bottom: solid 1px var(--light);
+}
+
+.count {
+    font-family: 'Telegraf-Ultralight';
+    font-size: 7.5vw;
+    color: var(--light);
+    padding: 2.5vh 2.5vw;
+    border-right: solid 1px var(--light);
+}
+
+.title {
+    font-family: 'Telegraf-Ultralight';
+    font-size: 7.5vw;
+    color: var(--light);
+    padding: 2.5vh 2.5vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery {
+    order: 1;
+    width: 100vw;
+    height: 30vh;
+    border-bottom: solid 1px var(--light);
+    position: relative;
+}
+
+.drag {
+    position: absolute;
+    right: 5vw;
+    top: 15vh;
+    color: var(--light);
+    background-color: var(--button);
+    font-family: 'Telegraf-Regular';
+    letter-spacing: 2.5px;
+    padding: .75vh 2.5vw;
+}
+
+.details {
+    order: 2;
+    width: 95vw;
+    padding: 2.5vh 2.5vw;
+    border-bottom: solid 1px var(--light);
+    display: flex;
+    flex-direction: column;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    padding-bottom: 2.5vh;
+}
+
+.tag {
+    color: var(--light);
+    font-family: 'Telegraf-Regular';
+    font-size: 4.5vw;
+    padding: .75vh 2.5vw;
+    background-color: var(--button);
+    border-radius: 5px;
+}
+
+.copy {
+    color: var(--light);
+    font-family: 'Telegraf-Regular';
+    font-size: 4.5vw;
+    padding-bottom: 1vh;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--light);
+    font-family: 'Telegraf-Ultralight';
+}
+
+
+
+@media screen and (min-width: 750px) {
+    .work {
+
+    }
+    
+    .case {
+    
+    }
+    
+    .header {
+    
+    }
+    
+    .count {
+        font-size: 4vw;
+        padding: 2.5vh 2.5vw;
+    }
+    
+    .title {
+        font-size: 4vw;
+        padding: 2.5vh 2.5vw;
+    }
+    
+    .content {
+        flex-direction: row;
+        border-bottom: solid 1px var(--light);
+    }
+
+    .gallery {
+        order: 2;
+        width: 70vw;
+        height: 50vh;
+        border-bottom: none;
+    }
+
+    .drag {
+        position: absolute;
+        color: var(--light);
+        border-radius: 5px;
+        padding: ;
+        font-family: 'Telegraf-Regular';
+        letter-spacing: 2.5px;
+        right: 5vw;
+        top: 25vh;
+    }
+    
+    .details {
+        order: 1;
+        width: 25vw;
+        border-bottom: none;
+        border-right: solid 1px var(--light);
+    }
+    
+    .tags {
+        gap: .5vw;
+    }
+    
+    .tag {
+        font-size: 1.5vw;
+        padding: .5vh 1vw;
+    }
+    
+    .copy {
+        font-size: 1.5vw;
+    }
+    
+    .link {
+        font-size: 1.5vw;
+    }
 }
