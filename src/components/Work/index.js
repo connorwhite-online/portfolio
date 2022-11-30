@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import './index.css';
 
@@ -7,50 +7,94 @@ function Work () {
     const [Projects] = useState([
         {
             name: 'JESS FORD CARE',
-            folder: 'jessford',
+            folder: './images/jessford',
             tags: ['Design', 'Dev'],
             copy: 'project',
             link: 'https://jessford.care'
         },
         {
             name: 'R3F-KEROSENE',
-            folder: 'r3f-kerosene',
+            folder: './images/r3f-kerosene',
             tags: ['3D', 'Design', 'Dev'],
             copy: 'Quick-start framework for performant, real-time 3D apps using React.js to create reusable components from three.js scenes and models.',
             link: 'https://r3f-kerosene.vercel.app/'
         },
         {
             name: 'R3F-IMMERSIVE',
-            folder: 'r3f-immersive',
+            folder: './images/r3f-immersive',
             tags: ['3D', 'AR', 'Design', 'Dev'],
             copy: 'A framework for creating immersive VR/AR experiences using React.js, three.js, and WebXR. The demo is only visible via mobile VR browsers (I recommend Mozilla XR Viewer) or VR headset. A testament to the current limitations of WebXR.',
             link: 'https://r3f-immersive.vercel.app/',
         },
         {
             name: 'LGS STUDIO',
-            folder: 'lgs',
+            folder: './images/lgs',
             tags: ['3D', 'Design', 'Fabrication'],
             copy: 'project',
             link: 'https://www.lgsstudio.com'
         },
         {
             name: 'MULTNOMAH DRUG',
-            folder: 'multnomahdrug',
+            folder: './images/multnomahdrug',
             tags: ['Design', 'Dev', 'Apparel'],
             copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency.',
             link: 'https://www.instagram.com/multnomahdrug/',
         },
         {
             name: 'KLYXX CREATIVE',
-            folder: 'klyxx',
+            folder: './images/klyxx',
             tags: ['Design', 'Dev'],
             copy: 'Design and Webflow development for NYC-based creative agency. My role included in-depth case studies of previous work as well as new presentation assets.',
             link: 'https://www.klyxx.co/'
         }
     ])
+
+    const workRef = useRef();
+
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.fromTo('.header', {
+                scaleX: 0,
+            }, {
+                scaleX: 1,
+                duration: 1,
+                ease: 'power4.inOut'
+            });
+            gsap.fromTo('.count, .title', {
+                opacity: 0,
+                scaleY: 0,
+            }, {
+                scrollTrigger: '.header',
+                delay: 1,
+                opacity: 1,
+                scaleY: 1,
+                ease: 'power3.inOut',
+            });
+            gsap.fromTo('.content', {
+                scaleY: 0,
+            }, {
+                delay: 1,
+                scaleY: 1,
+                duration: 1,
+                ease: 'power4.inOut',
+            });
+            gsap.fromTo(' .tag, .copy, .link, .images', {
+                opacity: 0,
+                x: 50,
+            }, {
+                delay: 2,
+                duration: 1,
+                opacity: 1,
+                x: 0,
+                ease: 'power3.inOut',
+                stagger: 0.25,
+            })
+        }, workRef);
+        return() => ctx.revert();
+    }, []);
     
     return (
-        <div className='work'>
+        <div className='work' ref={workRef}>
             {Projects.map((project, index) => (
                 <div className='case' key={index}>
                     <div className='header'>
@@ -63,7 +107,7 @@ function Work () {
 
                             </div>
                             <div className='drag'>DRAG</div>
-                            {/* enter image function */}   
+                            {/* enter image function */}  
                         </div>
                         <div className='details'>
                             <div className='tags'>
