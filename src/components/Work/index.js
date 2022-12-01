@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import './index.css';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
+
 
 function Work () {
 
@@ -49,52 +52,56 @@ function Work () {
         }
     ])
 
-    const [guide, setGuide] = useState(true);
     const workRef = useRef();
-    const popupRef = useRef();
-    const guideTL = useRef();
 
     useEffect(() => {
+        
         let ctx = gsap.context(() => {
-            gsap.fromTo('.header', {
-                scaleX: 0,
-            }, {
-                scaleX: 1,
-                duration: 1,
-                ease: 'power4.inOut'
+            let projects = gsap.utils.toArray('.case');
+            projects.forEach((project) => {
+                gsap.fromTo('.header', {
+                    scaleX: 0,
+                }, {
+                    scaleX: 1,
+                    duration: 1,
+                    ease: 'power4.inOut'
+                });
+                gsap.fromTo('.count, .title', {
+                    opacity: 0,
+                    scaleY: 0,
+                }, {
+                    scrollTrigger: project,
+                    delay: 1,
+                    opacity: 1,
+                    scaleY: 1,
+                    ease: 'power3.inOut',
+                });
+                gsap.fromTo('.content', {
+                    scaleY: 0,
+                }, {
+                    delay: 1,
+                    scaleY: 1,
+                    duration: 1,
+                    ease: 'power4.inOut',
+                });
+                gsap.fromTo(' .tag, .copy, .link, .images', {
+                    opacity: 0,
+                    x: 50,
+                }, {
+                    delay: 2,
+                    duration: 1,
+                    opacity: 1,
+                    x: 0,
+                    ease: 'power3.inOut',
+                    stagger: 0.25,
+                })
             });
-            gsap.fromTo('.count, .title', {
-                opacity: 0,
-                scaleY: 0,
-            }, {
-                scrollTrigger: '.header',
-                delay: 1,
-                opacity: 1,
-                scaleY: 1,
-                ease: 'power3.inOut',
-            });
-            gsap.fromTo('.content', {
-                scaleY: 0,
-            }, {
-                delay: 1,
-                scaleY: 1,
-                duration: 1,
-                ease: 'power4.inOut',
-            });
-            gsap.fromTo(' .tag, .copy, .link, .images', {
-                opacity: 0,
-                x: 50,
-            }, {
-                delay: 2,
-                duration: 1,
-                opacity: 1,
-                x: 0,
-                ease: 'power3.inOut',
-                stagger: 0.25,
-            })
         }, workRef);
         return() => ctx.revert();
+        
     }, []);
+
+    // const importedPhotos = import(`../path/to/folder/${project.folder}/*`);
     
     return (
         <div className='work' ref={workRef}>
@@ -121,7 +128,7 @@ function Work () {
                         </div>
                     </div>
                 </div>
-            ))}
+            ))};
         </div>
     );
 }

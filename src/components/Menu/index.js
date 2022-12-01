@@ -36,7 +36,8 @@ function Menu () {
                 delay: 1.5,
                 ease: 'power3.inOut',
             });
-        }, menuRef)
+        }, menuRef);
+        return() => ctx.revert();
     }, []);
 
     return (
