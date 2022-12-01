@@ -49,7 +49,10 @@ function Work () {
         }
     ])
 
+    const [guide, setGuide] = useState(true);
     const workRef = useRef();
+    const popupRef = useRef();
+    const guideTL = useRef();
 
     useEffect(() => {
         let ctx = gsap.context(() => {
@@ -104,10 +107,8 @@ function Work () {
                     <div className='content'>
                         <div className='gallery'>
                             <div className='images'>
-
-                            </div>
-                            <div className='drag'>DRAG</div>
-                            {/* enter image function */}  
+                                {/* enter image function */} 
+                            </div> 
                         </div>
                         <div className='details'>
                             <div className='tags'>

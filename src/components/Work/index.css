@@ -63,17 +63,6 @@ html, body {
     position: relative;
 }
 
-.drag {
-    position: absolute;
-    right: 5vw;
-    top: 15vh;
-    color: var(--light);
-    background-color: var(--button);
-    font-family: 'Telegraf-Regular';
-    letter-spacing: 2.5px;
-    padding: .75vh 2.5vw;
-}
-
 .details {
     order: 2;
     width: 95vw;
@@ -147,17 +136,6 @@ html, body {
         width: 70vw;
         height: 50vh;
         border-bottom: none;
-    }
-
-    .drag {
-        position: absolute;
-        color: var(--light);
-        border-radius: 5px;
-        padding: ;
-        font-family: 'Telegraf-Regular';
-        letter-spacing: 2.5px;
-        right: 5vw;
-        top: 25vh;
     }
     
     .details {
