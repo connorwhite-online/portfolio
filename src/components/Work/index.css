@@ -21,8 +21,8 @@ html, body {
     --button: rgba(255, 255, 240, .25)
 }
 
-.work {
-
+.work::-webkit-scrollbar {
+    display: none;  
 }
 
 .case {
@@ -63,11 +63,29 @@ html, body {
     position: relative;
 }
 
+.images {
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-align: ;
+    scroll-snap-type: x mandatory;
+}
+
+.images::-webkit-scrollbar {
+    display: none;  
+}
+
+.gallery-img {
+    height: 30vh;
+    width: auto;
+}
+
 .details {
     order: 2;
     width: 95vw;
     padding: 2.5vh 2.5vw;
     border-bottom: solid 1px var(--light);
+    border-right: none;
     display: flex;
     flex-direction: column;
 }
@@ -138,6 +156,17 @@ html, body {
         border-bottom: none;
     }
     
+    .images {
+        height: 100%;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: mandatory;
+    }
+
+    .gallery-img {
+        height: 50vh;
+    }
+
     .details {
         order: 1;
         width: 25vw;
