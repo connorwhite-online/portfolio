@@ -56,8 +56,6 @@ function Work () {
     useEffect(() => {
         
         let ctx = gsap.context(() => {
-            let projects = gsap.utils.toArray('.case');
-            projects.forEach((project) => {
                 gsap.fromTo('.header', {
                     scaleX: 0,
                 }, {
@@ -93,7 +91,6 @@ function Work () {
                     ease: 'power3.inOut',
                     stagger: 0.25,
                 })
-            });
         }, workRef);
         return() => ctx.revert();
         
