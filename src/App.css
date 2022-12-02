@@ -8,3 +8,7 @@
   --dark: #0F0E0E;
   --light: #FFFFF0;
 }
+
+.App::-webkit-scrollbar {
+  display: none;
+}
