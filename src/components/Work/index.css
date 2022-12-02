@@ -33,6 +33,7 @@ html, body {
 .header {
     display: flex;
     border-bottom: solid 1px var(--light);
+    z-index: 10;
 }
 
 .count {
@@ -61,13 +62,13 @@ html, body {
     height: 30vh;
     border-bottom: solid 1px var(--light);
     position: relative;
+    z-index: 1;
 }
 
 .images {
     height: 100%;
     display: flex;
     overflow-x: scroll;
-    scroll-snap-align: ;
     scroll-snap-type: x mandatory;
 }
 
@@ -76,8 +77,8 @@ html, body {
 }
 
 .gallery-img {
-    height: 30vh;
     width: auto;
+    scroll-snap-align: start;
 }
 
 .details {
@@ -122,18 +123,6 @@ html, body {
 
 
 @media screen and (min-width: 750px) {
-    .work {
-
-    }
-    
-    .case {
-    
-    }
-    
-    .header {
-    
-    }
-    
     .count {
         font-size: 4vw;
         padding: 2.5vh 2.5vw;
@@ -161,10 +150,6 @@ html, body {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: mandatory;
-    }
-
-    .gallery-img {
-        height: 50vh;
     }
 
     .details {
