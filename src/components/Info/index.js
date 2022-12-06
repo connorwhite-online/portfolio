@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import './index.css';
 
 function Info () {
+
     return (
         <div className='info'>
             <div className='bio'>
