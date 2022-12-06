@@ -9,14 +9,14 @@ function Work () {
     const [Projects] = useState([
         {
             name: 'JESS FORD CARE',
-            images: ['./images/r3f-kerosene.png', './images/multnomah-drug.png', './images/r3f-immersive.png', './images/klyxx-creative.png'],
+            images: ['r3f-kerosene.png', 'multnomah-drug.png', 'r3f-immersive.png', 'klyxx-creative.png'],
             tags: ['Design', 'Dev'],
             copy: 'project',
             link: 'https://jessford.care'
         },
         {
             name: 'R3F-KEROSENE',
-            images: ['./images/pic1.jpg', './images/pic2.jpg', './images/pic3.jpg'],
+            images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
             tags: ['3D', 'Design', 'Dev'],
             copy: 'Quick-start framework for performant, real-time 3D apps using React.js to create reusable components from three.js scenes and models.',
             link: 'https://r3f-kerosene.vercel.app/'
@@ -108,7 +108,7 @@ function Work () {
                             <div className='gallery'>
                                 <div className='images'>
                                     {project.images.map((img, i) => (
-                                        <img className='gallery-img' src={img} key={i} alt={i}></img>
+                                        <img className='gallery-img' src={'./images/' + img} key={i} alt={i}></img>
                                     ))}
                                 </div> 
                             </div>
