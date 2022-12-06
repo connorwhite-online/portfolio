@@ -20,6 +20,62 @@ html, body {
     --light: #FFFFF0;
 }
 
-@media screen and (min-width: 750px) {
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 86vh;
+}
 
+.bio {
+    font-family: 'Telegraf-Regular';
+    font-size: 5vw;
+    color: var(--light);
+    padding: 5vh 2.5vw;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    border-top: solid 1px var(--light);
+}
+
+.link-box {
+    width: 95vw;
+    border-bottom: solid 1px var(--light);
+    padding: 2.5vh 2.5vw;
+    display: flex;
+}
+
+.link {
+    font-family: 'Telegraf-Ultralight';
+    font-size: 6vw;
+    
+}
+
+@media screen and (min-width: 750px) {
+    .bio {
+        font-size: 2.5vw;
+        padding: 5vh 2.5vw;
+    }
+    
+    .link-group {
+        flex-direction: row;
+        width: 100vw;
+    }
+    
+    .link-box {
+        border-bottom: solid 1px var(--light);
+        border-right: solid 1px var(--light);
+        border-left: solid 1px var(--light);
+        padding: 2.5vh 2.5vw;
+        justify-content: center;
+    }
+    
+    .link {
+        font-family: 'Telegraf-Ultralight';
+        font-size: 3vw;
+        
+    }
 }
