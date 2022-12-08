@@ -104,7 +104,7 @@ html, body {
     font-size: 4.5vw;
     padding: .75vh 2.5vw;
     background-color: var(--button);
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .copy {
@@ -173,7 +173,7 @@ a.link {
         font-size: 1.5vw;
     }
     
-    .link {
+    div a.link {
         font-size: 1.5vw;
     }
 }
