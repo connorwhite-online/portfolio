@@ -53,8 +53,8 @@ function Work () {
 
     const workRef = useRef();
 
-    useEffect(() => {
-        
+    // Case Loading Animations
+    useEffect(() => {      
         let ctx = gsap.context(() => {
                 gsap.fromTo('.header', {
                     scaleX: 0,
@@ -93,7 +93,6 @@ function Work () {
                 })
         }, workRef);
         return() => ctx.revert();
-        
     }, []);
 
     return (
@@ -108,7 +107,7 @@ function Work () {
                             <div className='gallery'>
                                 <div className='images'>
                                     {project.images.map((img, i) => (
-                                        <img className='gallery-img' src={'./images/' + img} key={i} alt={i}></img>
+                                        <img className='gallery-img' src={'./images/' + img} key={i} alt={project.name + ' ' + i}></img>
                                     ))}
                                 </div> 
                             </div>
