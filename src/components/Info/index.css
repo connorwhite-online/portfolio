@@ -20,25 +20,23 @@ html, body {
     --light: #FFFFF0;
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 86vh;
+.bio {
+    padding: 5vh 2.5vw;
+    width: 95vw;
+    border-bottom: solid 1px var(--light);
 }
 
-.bio {
+h1 {
     font-family: 'Telegraf-Regular';
     font-size: 5vw;
     color: var(--light);
-    padding: 5vh 2.5vw;
 }
 
 .link-group {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    border-top: solid 1px var(--light);
+    border-bottom: none;
 }
 
 .link-box {
@@ -56,26 +54,27 @@ html, body {
 
 @media screen and (min-width: 750px) {
     .bio {
+        padding: 10vh 2.5vw;
+    }
+
+    h1 {
         font-size: 2.5vw;
-        padding: 5vh 2.5vw;
     }
     
     .link-group {
         flex-direction: row;
-        width: 100vw;
+        border-bottom: solid 1px var(--light);
     }
     
     .link-box {
-        border-bottom: solid 1px var(--light);
-        border-right: solid 1px var(--light);
-        border-left: solid 1px var(--light);
         padding: 2.5vh 2.5vw;
         justify-content: center;
+        border-bottom: none;
     }
     
-    .link {
+    a.link {
         font-family: 'Telegraf-Ultralight';
-        font-size: 3vw;
+        font-size: 2vw;
         
     }
 }
