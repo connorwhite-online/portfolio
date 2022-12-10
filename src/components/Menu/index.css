@@ -32,6 +32,8 @@ html, body {
 }
 
 .marquee {
+    display: flex;
+    justify-content: center;
     overflow-x: scroll;
     border-bottom: solid 1px var(--light);
     padding: 1vh 0vw;
@@ -39,11 +41,16 @@ html, body {
     overflow: hidden;
 }
 
+.ticker1, .ticker2 {
+    font-family: 'Telegraf-Ultralight';
+    color: var(--light);
+    font-size: 4vw; 
+}
+
 .ticker {
     font-family: 'Telegraf-Ultralight';
     color: var(--light);
-    font-size: 4vw;
-    
+    font-size: 4vw; 
 }
 
 .nav {
@@ -73,6 +80,10 @@ html, body {
 
     }
     
+    .ticker1, .ticker2 {
+        font-size: 1.5vw;
+    }
+
     .ticker {
         font-size: 1.5vw;
     }
