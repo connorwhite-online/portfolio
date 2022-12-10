@@ -11,14 +11,14 @@ function Work () {
             name: 'JESS FORD CARE',
             images: ['r3f-kerosene.png', 'multnomah-drug.png', 'r3f-immersive.png', 'klyxx-creative.png'],
             tags: ['Design', 'Dev'],
-            copy: 'project',
+            copy: 'Booking site for full-spectrum doula, Jess Ford, emphasizing an aggressively minimal UI and stripped-down animation to simplify the UX for a wide range of ages. Built with React, animated with GSAP, and powered by Calendly.',
             link: 'https://jessford.care'
         },
         {
             name: 'R3F-KEROSENE',
             images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
             tags: ['3D', 'Design', 'Dev'],
-            copy: 'Quick-start framework for performant, real-time 3D apps using React.js to create reusable components from three.js scenes and models.',
+            copy: 'A quick-start framework for creating immersive 3D experiences with React and three.js. This project is aimed at onboarding 3D designers to real-time 3D apps with its simple setup and manipulatable structure.',
             link: 'https://r3f-kerosene.vercel.app/'
         },
         {
@@ -32,21 +32,21 @@ function Work () {
             name: 'LGS STUDIO',
             images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
             tags: ['3D', 'Design', 'Fabrication'],
-            copy: 'project',
+            copy: 'I worked as visual designer for LA-based ceramic studio, LGS, rendering client projects, delivering wiring technical sheets, and designing custom tooling. Client work included lighting for Nicole Hollis, and packaging for a collaboration with Seth Rogens homegoods brand, HousePlant.',
             link: 'https://www.lgsstudio.com'
         },
         {
             name: 'MULTNOMAH DRUG',
             images: ['r3f-kerosene.png', 'multnomah-drug.png', 'r3f-immersive.png', 'klyxx-creative.png'],
             tags: ['Design', 'Dev', 'Apparel'],
-            copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency.',
+            copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency. The masks featured a single layer of technical fabric, laser-cut and sewn with minimal processing for rapid production.',
             link: 'https://www.instagram.com/multnomahdrug/',
         },
         {
             name: 'KLYXX CREATIVE',
             images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
             tags: ['Design', 'Dev'],
-            copy: 'Design and Webflow development for NYC-based creative agency. My role included in-depth case studies of previous work as well as new presentation assets.',
+            copy: 'As Senior Designer at Klyxx, I led a small team of designers through a multitude of client work including apps, landing pages, and promotional. Clients included Made Renovation, KPMG, Elfster, etc.',
             link: 'https://www.klyxx.co/'
         }
     ])
@@ -56,41 +56,39 @@ function Work () {
     // Case Loading Animations
     useEffect(() => {      
         let ctx = gsap.context(() => {
-                gsap.fromTo('.header', {
-                    scaleX: 0,
-                }, {
-                    scaleX: 1,
-                    duration: 1,
-                    ease: 'power4.inOut'
-                });
-                gsap.fromTo('.count, .title', {
-                    opacity: 0,
-                    scaleY: 0,
-                }, {
-                    delay: 1,
-                    opacity: 1,
-                    scaleY: 1,
-                    ease: 'power3.inOut',
-                });
-                gsap.fromTo('.content', {
-                    scaleY: 0,
-                }, {
-                    delay: 1,
-                    scaleY: 1,
-                    duration: 1,
-                    ease: 'power4.inOut',
-                });
-                gsap.fromTo(' .tag, .copy, .link, .gallery-img', {
-                    opacity: 0,
-                    x: 100,
-                }, {
-                    delay: 2,
-                    duration: 1,
-                    opacity: 1,
-                    x: 0,
-                    ease: 'power3.inOut',
-                    stagger: 0.25,
-                })
+                let tl = gsap.timeline({});
+                    tl.from('.header', {
+                        scaleX: 0,
+                        duration: 1,
+                        ease: 'power4.inOut'
+                    });
+                    tl.from('.count, .title', {
+                        opacity: 0,
+                        ease: 'power3.inOut',
+                    });
+                    tl.from('.content', {
+                        scaleY: 0,
+                        duration: 1,
+                        ease: 'power4.inOut',
+                    });
+                    tl.from('.tag', {
+                        opacity: 0,
+                        scale: .5,
+                        duration: 1,
+                        ease: 'power3.inOut',
+                    })
+                    tl.from('.copy, .link', {
+                        opacity: 0,
+                        duration:1,
+                        ease: 'power3.inOut',
+                    })
+                    tl.from('.gallery-img', {
+                        opacity: 0,
+                        scaleY: 0,
+                        duration: 1,
+                        ease: 'power3.inOut',
+                        stagger: 0.25,
+                    })
         }, workRef);
         return() => ctx.revert();
     }, []);
