@@ -23,7 +23,7 @@ function Work () {
         },
         {
             name: 'R3F-IMMERSIVE',
-            images: ['r3f-kerosene.png', 'multnomah-drug.png', 'r3f-immersive.png', 'klyxx-creative.png'],
+            images: ['r3f-immersive-01.png', 'r3f-immersive-02.png', 'r3f-immersive-03.png', 'r3f-immersive-04.png'],
             tags: ['3D', 'AR', 'Design', 'Dev'],
             copy: 'A framework for creating immersive VR/AR experiences using React.js, three.js, and WebXR. The demo is only visible via mobile VR browsers (I recommend Mozilla XR Viewer) or VR headset. A testament to the current limitations of WebXR.',
             link: 'https://r3f-immersive.vercel.app/',
