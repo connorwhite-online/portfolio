@@ -16,7 +16,7 @@ function Work () {
         },
         {
             name: 'R3F-KEROSENE',
-            images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
+            images: ['r3f-kerosene-01.png', 'r3f-kerosene-02.png', 'r3f-kerosene-03.png', 'r3f-kerosene-04.png'],
             tags: ['3D', 'Design', 'Dev'],
             copy: 'A quick-start framework for creating immersive 3D experiences with React and three.js. This project is aimed at onboarding 3D designers to real-time 3D apps with its simple setup and manipulatable structure.',
             link: 'https://r3f-kerosene.vercel.app/'
@@ -44,7 +44,7 @@ function Work () {
         },
         {
             name: 'KLYXX CREATIVE',
-            images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
+            images: ['klyxx-01.png', 'klyxx-02.png', 'klyxx-03.png', 'klyxx-04.png'],
             tags: ['Design', 'Dev'],
             copy: 'As Senior Designer at Klyxx, I led a small team of designers through a multitude of client work including apps, landing pages, and promotional. Clients included Made Renovation, KPMG, Elfster, etc.',
             link: 'https://www.klyxx.co/'
