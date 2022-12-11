@@ -30,14 +30,14 @@ function Work () {
         },
         {
             name: 'LGS STUDIO',
-            images: ['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],
+            images: ['lgs-01.jpg', 'lgs-02.jpg', 'lgs-03.jpg', 'lgs-04.jpg', 'lgs-techsheet.png', 'lithic-sconce.gif', 'lgs-packaging.png'],
             tags: ['3D', 'Design', 'Fabrication'],
             copy: 'I worked as visual designer for LA-based ceramic studio, LGS, rendering client projects, delivering wiring technical sheets, and designing custom tooling. Client work included lighting for Nicole Hollis, and packaging for a collaboration with Seth Rogens homegoods brand, HousePlant.',
             link: 'https://www.lgsstudio.com'
         },
         {
             name: 'MULTNOMAH DRUG',
-            images: ['r3f-kerosene.png', 'multnomah-drug.png', 'r3f-immersive.png', 'klyxx-creative.png'],
+            images: ['garageshot.jpg', 'product-page.jpg', 'hero-shot.jpg', 'packaging.jpg', 'vote.gif'],
             tags: ['Design', 'Dev', 'Apparel'],
             copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency. The masks featured a single layer of technical fabric, laser-cut and sewn with minimal processing for rapid production.',
             link: 'https://www.instagram.com/multnomahdrug/',
