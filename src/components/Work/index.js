@@ -16,7 +16,7 @@ function Work () {
         },
         {
             name: 'R3F-KEROSENE',
-            images: ['r3f-kerosene-01.png', 'r3f-kerosene-02.png', 'r3f-kerosene-03.png', 'r3f-kerosene-04.png'],
+            images: ['r3f-kerosene-01.png', 'r3f-kerosene-02.png', 'r3f-kerosene-03.png', 'r3f-kerosene-04.png', 'r3f-kerosene-05.png'],
             tags: ['3D', 'Design', 'Dev'],
             copy: 'A quick-start framework for creating immersive 3D experiences with React and three.js. This project is aimed at onboarding 3D designers to real-time 3D apps with its simple setup and manipulatable structure.',
             link: 'https://r3f-kerosene.vercel.app/'
@@ -30,14 +30,14 @@ function Work () {
         },
         {
             name: 'LGS STUDIO',
-            images: ['lgs-01.jpg', 'lgs-02.jpg', 'lgs-03.jpg', 'lgs-04.jpg', 'lgs-techsheet.png', 'lithic-sconce.gif', 'lgs-packaging.png'],
+            images: ['lgs-01.png', 'lgs-02.png', 'lgs-03.png', 'lgs-04.png', 'lgs-techsheet.png', 'lithic-sconce.gif', 'lgs-packaging.png'],
             tags: ['3D', 'Design', 'Fabrication'],
             copy: 'I worked as visual designer for LA-based ceramic studio, LGS, rendering client projects, delivering wiring technical sheets, and designing custom tooling. Client work included lighting for Nicole Hollis, and packaging for a collaboration with Seth Rogens homegoods brand, HousePlant.',
             link: 'https://www.lgsstudio.com'
         },
         {
             name: 'MULTNOMAH DRUG',
-            images: ['garageshot.jpg', 'product-page.jpg', 'hero-shot.jpg', 'packaging.jpg', 'vote.gif'],
+            images: ['garageshot.png', 'product-page.png', 'hero-shot.png', 'packaging.png', 'vote.gif'],
             tags: ['Design', 'Dev', 'Apparel'],
             copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency. The masks featured a single layer of technical fabric, laser-cut and sewn with minimal processing for rapid production.',
             link: 'https://www.instagram.com/multnomahdrug/',
