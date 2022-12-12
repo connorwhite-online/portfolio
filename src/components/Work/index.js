@@ -9,7 +9,7 @@ function Work () {
     const [Projects] = useState([
         {
             name: 'JESS FORD CARE',
-            images: ['r3f-kerosene.png', 'multnomah-drug.png', 'r3f-immersive.png', 'klyxx-creative.png'],
+            images: ['jess-ford-01.png', 'jess-ford-02.png', 'jess-ford-03.png', 'jess-ford-04.png', 'jess-ford-05.png'],
             tags: ['Design', 'Dev'],
             copy: 'Booking site for full-spectrum doula, Jess Ford, emphasizing an aggressively minimal UI and stripped-down animation to simplify the UX for a wide range of ages. Built with React, animated with GSAP, and powered by Calendly.',
             link: 'https://jessford.care'
