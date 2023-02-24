@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import './index.css';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger'
-// gsap.registerPlugin(ScrollTrigger);
 
 function Work () {
 
+    const screenWidth = window.innerWidth;
+    
     const [Projects] = useState([
         {
             name: 'JESS FORD CARE',
@@ -105,7 +105,7 @@ function Work () {
                             <div className='gallery'>
                                 <div className='images'>
                                     {project.images.map((img, i) => (
-                                        <img className='gallery-img' src={'./images/' + img} key={i} alt={project.name + ' ' + i}></img>
+                                        <img className='gallery-img' src={'./images/' + img} key={i} alt={project.name + ' ' + i} width={screenWidth <= 749 ? 300 : 800} height={screenWidth <= 749 ? 300 : 800}></img>
                                     ))}
                                 </div> 
                             </div>
