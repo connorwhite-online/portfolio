@@ -30,7 +30,7 @@ function Work () {
         },
         {
             name: 'LGS STUDIO',
-            images: ['lgs-01.png', 'lgs-02.png', 'lgs-03.png', 'lgs-04.png', 'lgs-techsheet.png', 'lithic-sconce.gif', 'lgs-packaging.png'],
+            images: ['lgs-01.png', 'lgs-02.png', 'lgs-03.png', 'lgs-04.png', 'lgs-techsheet.png', 'lithic-sconce.png', 'lgs-packaging.png'],
             tags: ['3D', 'Design', 'Fabrication'],
             copy: 'I worked as visual designer for LA-based ceramic studio, LGS, rendering client projects, delivering wiring technical sheets, and designing custom tooling. Client work included lighting for Nicole Hollis, and packaging for a collaboration with Seth Rogens homegoods brand, HousePlant.',
             link: 'https://www.lgsstudio.com'
