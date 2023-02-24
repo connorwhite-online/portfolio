@@ -12,3 +12,15 @@
 .App::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: 'Telegraf-Regular';
+  src: url(../../assets/fonts/PPTelegraf-Regular.woff2) format('woff2');
+  src: url(../../assets/fonts/PPTelegraf-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Telegraf-Ultralight';
+  src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2) format('woff2');
+  src: url(../../assets/fonts/PPTelegraf-UltraLight.woff) format('woff');
+}
