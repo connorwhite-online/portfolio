@@ -21,6 +21,6 @@
 
 @font-face {
   font-family: 'Telegraf-Ultralight';
-  src: url(../../assets/fonts/PPTelegraf-UltraLight.woff2) format('woff2');
-  src: url(../../assets/fonts/PPTelegraf-UltraLight.woff) format('woff');
+  src: url(./assets/fonts/PPTelegraf-UltraLight.woff2) format('woff2');
+  src: url(./assets/fonts/PPTelegraf-UltraLight.woff) format('woff');
 }
