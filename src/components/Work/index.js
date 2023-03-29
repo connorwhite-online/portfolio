@@ -8,6 +8,13 @@ function Work () {
     
     const [Projects] = useState([
         {
+            name: 'IN NO PARTICULAR ORDER',
+            images: ['inpo-01.png', 'inpo-02.png', 'inpo-03.png', 'inpo-04.png', 'inpo-05.png', 'inpo-06.png'],
+            tags: ['Design', 'Dev', '3D'],
+            copy: 'A custom Tumblr design build for designer Sean Browns photojournal In No Particular Order launching its third addition.',
+            link: 'https://byseanbrown.tumblr.com/'
+        },
+        {
             name: 'JESS FORD CARE',
             images: ['jess-ford-01.png', 'jess-ford-02.png', 'jess-ford-03.png', 'jess-ford-04.png', 'jess-ford-05.png'],
             tags: ['Design', 'Dev'],
