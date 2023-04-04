@@ -15,6 +15,13 @@ function Work () {
             link: 'https://byseanbrown.tumblr.com/'
         },
         {
+            name: "DECENTRALIZED HARDWARE",
+            images: ['hardware-01.png', 'hardware-02.png', 'hardware-03.png', 'hardware-04.png', 'hardware-05.png'],
+            tags: ['Design', '3D', 'Fabrication'],
+            copy: 'A 3D-printed prototype for garment hardware that allows end-users to produce parts from anywhere in the world in single unit production. The prototype is SLS printed Nylon12 and utilizes an SLM printed aluminum press that universally fits soldering irons to secure the hardware.',
+            link: 'https://www.instagram.com/p/CndLiR6PNWl/'
+        },
+        {
             name: 'JESS FORD CARE',
             images: ['jess-ford-01.png', 'jess-ford-02.png', 'jess-ford-03.png', 'jess-ford-04.png', 'jess-ford-05.png'],
             tags: ['Design', 'Dev'],
