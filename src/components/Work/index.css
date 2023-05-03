@@ -18,7 +18,7 @@ html, body {
 :root {
     --dark: #0F0E0E;
     --light: #FFFFF0;
-    --button: rgba(255, 255, 240, .25)
+    --button: rgba(255, 255, 240, .6)
 }
 
 .work::-webkit-scrollbar {
@@ -38,7 +38,7 @@ html, body {
 
 .count {
     font-family: 'Telegraf-Ultralight';
-    font-size: 7.5vw;
+    font-size: 5vw;
     color: var(--light);
     padding: 2.5vh 2.5vw;
     border-right: solid 1px var(--light);
@@ -46,7 +46,7 @@ html, body {
 
 .title {
     font-family: 'Telegraf-Ultralight';
-    font-size: 7.5vw;
+    font-size: 5vw;
     color: var(--light);
     padding: 2.5vh 2.5vw;
 }
@@ -80,58 +80,63 @@ html, body {
     height: 30vh;
     width: auto;
     scroll-snap-align: start;
+    border-right: solid 1px var(--light);
 }
 
 .details {
     order: 2;
     width: 95vw;
-    padding: 2.5vh 2.5vw;
+    padding: 5vh 2.55vw;
     border-bottom: solid 1px var(--light);
     border-right: none;
     display: flex;
     flex-direction: column;
+    gap: 2vh;
 }
 
 .tags {
     display: flex;
     flex-direction: row;
     gap: 1vw;
-    padding-bottom: 2.5vh;
+    /* padding-bottom: 2.5vh; */
 }
 
 .tag {
-    color: var(--light);
+    color: var(--button);
     font-family: 'Telegraf-Regular';
-    font-size: 4.5vw;
-    padding: .75vh 2.5vw;
-    background-color: var(--button);
-    border-radius: 25px;
+    font-size: 4vw;
+    /* padding: .75vh 2.5vw; */
+    /* background-color: var(--button);
+    border-radius: 25px; */
 }
 
 .copy {
     color: var(--light);
     font-family: 'Telegraf-Regular';
-    font-size: 4.5vw;
+    font-size: 4vw;
     padding-bottom: 1vh;
 }
 
-a.link {
+a.linkout {
+    padding: 1vh 2vw;
+    border: solid 1px var(--light);
+    border-radius: 25px;
     text-decoration: none;
     color: var(--light);
     font-family: 'Telegraf-Ultralight';
-    font-size: 4.5vw;
+    font-size: 4vw;
 }
 
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
     .count {
-        font-size: 4vw;
+        font-size: 3vw;
         padding: 2.5vh 2.5vw;
     }
     
     .title {
-        font-size: 4vw;
+        font-size: 3vw;
         padding: 2.5vh 2.5vw;
     }
     
@@ -164,22 +169,38 @@ a.link {
         width: 25vw;
         border-bottom: none;
         border-right: solid 1px var(--light);
+        padding: 2.5vh 2.5vw;
     }
     
     .tags {
-        gap: .5vw;
+        gap: 2vw;
     }
     
     .tag {
-        font-size: 1.5vw;
-        padding: .5vh 1vw;
+        font-size: 1.25vw;
     }
     
     .copy {
         font-size: 1.5vw;
     }
     
-    div a.link {
+    a.linkout {
         font-size: 1.5vw;
+        padding: 1vh 1vw;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .gallery, .gallery-img {
+        height: 50vh;
+    }
+    .title, .count {
+        font-size: 4vw;
+    }
+    .tag, .copy, a.linkout {
+        font-size: 2.5vw;
+    }
+    .details {
+        padding: 5vh 2.5vw;
     }
 }
