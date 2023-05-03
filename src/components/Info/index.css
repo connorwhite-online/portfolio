@@ -20,62 +20,49 @@ html, body {
     --light: #FFFFF0;
 }
 
-.bio {
-    padding: 5vh 2.5vw;
+.info {
+    padding: 10vh 2.5vw;
     width: 95vw;
-    border-bottom: solid 1px var(--light);
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-    font-family: 'Telegraf-Regular';
-    font-size: 5vw;
+.bio {
+    font-family: 'Telegraf-Ultralight';
+    text-align: center;
+    font-size: 7vw;
     color: var(--light);
 }
 
 .link-group {
+    width: 25vw;
     display: flex;
-    flex-direction: column;
-    width: 100vw;
-    border-bottom: none;
+    justify-content: center;
+    gap: 5vw;
 }
 
 .link-box {
-    width: 95vw;
-    border-bottom: solid 1px var(--light);
-    padding: 2.5vh 2.5vw;
-    display: flex;
 }
 
-div.link-box a.link {
-    text-decoration: none;
-    font-family: 'Telegraf-Ultralight';
-    font-size: 6vw;
-    
+div a.link {
+    color: #FFFFF0;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
     .bio {
-        padding: 10vh 2.5vw;
-        border-bottom: none;
-    }
-
-    h1 {
         font-size: 2.5vw;
     }
     
     .link-group {
-        flex-direction: row;
+        gap: 2vw;
     }
-    
-    .link-box {
-        padding: 2.5vh 2.5vw;
-        justify-content: center;
-        border-bottom: none;
-    }
-    
-    div.link-box a.link {
-        text-decoration: none;
-        font-family: 'Telegraf-Ultralight';
-        font-size: 2vw;
-    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+.bio {
+    font-size: 3vw;
+}
 }
