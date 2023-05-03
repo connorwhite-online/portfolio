@@ -46,7 +46,8 @@ h1 {
     display: flex;
 }
 
-.link {
+div.link-box a.link {
+    text-decoration: none;
     font-family: 'Telegraf-Ultralight';
     font-size: 6vw;
     
@@ -72,7 +73,8 @@ h1 {
         border-bottom: none;
     }
     
-    a.link {
+    div.link-box a.link {
+        text-decoration: none;
         font-family: 'Telegraf-Ultralight';
         font-size: 2vw;
     }
