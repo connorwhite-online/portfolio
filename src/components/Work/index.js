@@ -51,7 +51,7 @@ function Work () {
         },
         {
             name: 'MULTNOMAH DRUG',
-            images: ['garageshot.png', 'product-page.png', 'hero-shot.png', 'packaging.png', 'vote.gif'],
+            images: ['garageshot.png', 'product-page.png', 'hero-shot.png', 'packaging.png'],
             tags: ['Design', 'Dev', 'Apparel'],
             copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency. The masks featured a single layer of technical fabric, laser-cut and sewn with minimal processing for rapid production.',
             link: 'https://www.instagram.com/multnomahdrug/',
