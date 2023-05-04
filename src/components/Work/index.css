@@ -18,7 +18,8 @@ html, body {
 :root {
     --dark: #0F0E0E;
     --light: #FFFFF0;
-    --button: rgba(255, 255, 240, .6)
+    --tag: rgba(255, 255, 240, .6);
+    --button: rgba(255, 255, 240, .25);
 }
 
 .work::-webkit-scrollbar {
@@ -102,7 +103,7 @@ html, body {
 }
 
 .tag {
-    color: var(--button);
+    color: var(--tag);
     font-family: 'Telegraf-Regular';
     font-size: 4vw;
     /* padding: .75vh 2.5vw; */
@@ -125,6 +126,10 @@ a.linkout {
     color: var(--light);
     font-family: 'Telegraf-Ultralight';
     font-size: 4vw;
+}
+
+a.linkout:hover {
+    background-color: var(--button);
 }
 
 
