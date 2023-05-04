@@ -97,7 +97,7 @@ html, body {
 .tags {
     display: flex;
     flex-direction: row;
-    gap: 3vw;
+    gap: 5vw;
     /* padding-bottom: 2.5vh; */
 }
 
