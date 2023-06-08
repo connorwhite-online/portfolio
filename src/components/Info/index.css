@@ -45,6 +45,7 @@ html, body {
 }
 
 .link-box {
+    clip-path: inset(0);
 }
 
 div a.link {

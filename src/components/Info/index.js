@@ -20,16 +20,20 @@ function Info () {
         let ctx = gsap.context(() => {
             gsap.fromTo('.bio', {
                 opacity: 0,
+                clipPath: 'inset(0 0 100% 0)',
             }, {
+                clipPath: 'inset(0 0 0% 0)',
                 opacity: 1,
                 duration: 1,
                 ease: 'power3.inOut',
             });
             boxes.forEach((box, i) => {
                 gsap.fromTo(box, {
-                    scaleX: 0,
+                    // scaleX: 0,
+                    clipPath: 'inset(0 0 100% 0)',
                 }, {
-                    scaleX: 1,
+                    // scaleX: 1,
+                    clipPath: 'inset(0 0 0% 0)',
                     duration: 1,
                     delay: i*.5,
                     ease: 'power4.inOut',
