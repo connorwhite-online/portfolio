@@ -82,11 +82,13 @@ html, body {
     width: auto;
     scroll-snap-align: start;
     border-right: solid 1px var(--light);
+    clip-path: inset(0);
 }
 
 .details {
     order: 2;
     width: 95vw;
+    height: auto;
     padding: 5vh 2.55vw;
     border-bottom: solid 1px var(--light);
     border-right: none;
@@ -115,11 +117,15 @@ html, body {
     color: var(--light);
     font-family: 'Telegraf-Regular';
     font-size: 4vw;
-    padding-bottom: 1vh;
+    padding-bottom: 5vh;
+}
+
+.link-box {
+    align-self: center;
 }
 
 a.linkout {
-    padding: 1vh 2vw;
+    padding: 1vh 3vw;
     border: solid 1px var(--light);
     border-radius: 25px;
     text-decoration: none;
@@ -186,12 +192,12 @@ a.linkout:hover {
     }
     
     .copy {
-        font-size: 1.5vw;
+        font-size: 1.25vw;
     }
     
     a.linkout {
-        font-size: 1.5vw;
-        padding: 1vh 1vw;
+        font-size: 1.25vw;
+        padding: 1vh 2vw;
     }
 }
 

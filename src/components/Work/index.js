@@ -18,7 +18,7 @@ function Work () {
             name: 'IN NO PARTICULAR ORDER',
             images: ['inpo-01.png', 'inpo-02.png', 'inpo-03.png', 'inpo-04.png', 'inpo-05.png', 'inpo-06.png'],
             tags: ['Design', 'Dev', '3D'],
-            copy: 'A custom Tumblr design and build celebrating the third edition of In No Particular Order, a photojournal by designer Sean Brown.',
+            copy: 'A custom Tumblr design and build celebrating the third edition of In No Particular Order, a photojournal by designer and creative director Sean Brown.',
             link: 'https://byseanbrown.tumblr.com/'
         },
         {
@@ -85,6 +85,7 @@ function Work () {
                     });
                     tl.from('.count, .title', {
                         opacity: 0,
+                        duration: 1,
                         ease: 'power3.inOut',
                     });
                     tl.from('.content', {
@@ -100,12 +101,13 @@ function Work () {
                     })
                     tl.from('.copy, .linkout', {
                         opacity: 0,
-                        duration:1,
+                        duration: 1,
                         ease: 'power3.inOut',
                     })
                     tl.from('.gallery-img', {
-                        opacity: 0,
-                        scaleY: 0,
+                        // opacity: 0,
+                        // scaleY: 0,
+                        clipPath: 'inset(0 0 100% 0)',
                         duration: 1,
                         ease: 'power3.inOut',
                         stagger: 0.25,
@@ -137,7 +139,7 @@ function Work () {
                                     ))}
                                 </div>
                                 <div className='copy'>{project.copy}</div>
-                                <div><a className='linkout' href={project.link} target="_blank" rel="noopener noreferrer">view live case →</a></div>
+                                <div className='link-box'><a className='linkout' href={project.link} target="_blank" rel="noopener noreferrer">view live case →</a></div>
                             </div>
                         </div>
                     </div>
