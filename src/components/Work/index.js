@@ -6,7 +6,15 @@ function Work () {
 
     const screenWidth = window.innerWidth;
     
+    // Project Directory
     const [Projects] = useState([
+        {
+            name: 'SQ FT',
+            images: ['sqft-01.png', 'sqft-02.png', 'sqft-03.png', 'sqft-04.png', 'sqft-05.png'],
+            tags: ['Design', 'Dev', '3D', 'Shopify'],
+            copy: 'E-com site for the launch of SQ FT Magazine, from designer and tastemaker Sean Brown. The site features a Shopify backend and an interactive 3D model of the magazine that reacts to the user cursor.',
+            link: 'https://readsqft.com/'
+        },
         {
             name: 'MANIPULATE',
             images: ['manipulate-01.png', 'manipulate-02.png', 'manipulate-03.png', 'manipulate-04.png'],
@@ -83,27 +91,27 @@ function Work () {
                         duration: 1,
                         ease: 'power4.inOut'
                     });
-                    tl.from('.count, .title', {
-                        opacity: 0,
-                        duration: 1,
-                        ease: 'power3.inOut',
-                    });
                     tl.from('.content', {
                         scaleY: 0,
                         duration: 1,
                         ease: 'power4.inOut',
+                    });
+                    tl.from('.count, .title', {
+                        opacity: 0,
+                        duration: 1,
+                        ease: 'power3.inOut',
                     });
                     tl.from('.tag', {
                         opacity: 0,
                         scale: .5,
                         duration: 1,
                         ease: 'power3.inOut',
-                    })
-                    tl.from('.copy, .linkout', {
+                    });
+                    tl.from('.copy, .link-box', {
                         opacity: 0,
                         duration: 1,
                         ease: 'power3.inOut',
-                    })
+                    });
                     tl.from('.gallery-img', {
                         // opacity: 0,
                         // scaleY: 0,
@@ -111,7 +119,7 @@ function Work () {
                         duration: 1,
                         ease: 'power3.inOut',
                         stagger: 0.25,
-                    })
+                    });
         }, workRef);
         return() => ctx.revert();
     }, []);
