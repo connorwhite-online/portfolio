@@ -122,10 +122,11 @@ html, body {
 
 .link-box {
     align-self: center;
+    padding: 1vh 3vw;
 }
 
 a.linkout {
-    padding: 1vh 3vw;
+    padding: inherit;
     border: solid 1px var(--light);
     border-radius: 25px;
     text-decoration: none;
@@ -194,10 +195,14 @@ a.linkout:hover {
     .copy {
         font-size: 1.25vw;
     }
+
+    .link-box {
+        padding: 1vh 2vw;
+    }
     
     a.linkout {
         font-size: 1.25vw;
-        padding: 1vh 2vw;
+        padding: inherit;
     }
 }
 
