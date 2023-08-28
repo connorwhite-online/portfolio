@@ -9,6 +9,13 @@ function Work () {
     // Project Directory
     const [Projects] = useState([
         {
+            name: 'INITIAL THOUGHTS',
+            images: ['oit.png'],
+            tags: ['Design', 'Dev'],
+            copy: 'Agency landing page for Initial Thoughts, a creative strategy and design studio based in Toronto. I designed the site and built it using React and GSAP.',
+            link: 'https://ourinitialthoughts.com'
+        },
+        {
             name: 'SQ FT',
             images: ['sqft-01.png', 'sqft-02.png', 'sqft-03.png', 'sqft-04.png', 'sqft-05.png'],
             tags: ['Design', 'Dev', '3D', 'Shopify'],
