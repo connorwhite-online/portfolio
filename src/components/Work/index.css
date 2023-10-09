@@ -26,6 +26,33 @@ html, body {
     display: none;  
 }
 
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: #FFFFF0 solid 1px;
+    padding: 2.5vh 2.5vw;
+    gap: 2.5dvw;
+}
+
+.filter-tag {
+    color: var(--light);
+    font-family: 'Telegraf-Regular';
+    font-size: 4vw;
+    border: #FFFFF0 solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1vh 1vw;
+}
+
+.selected {
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.filter-tag:hover {
+    background-color: var(--button);
+}
+
 .case {
     display: flex;
     flex-direction: column;
@@ -128,7 +155,7 @@ html, body {
 a.linkout {
     padding: inherit;
     border: solid 1px var(--light);
-    border-radius: 25px;
+    border-radius: 5px;
     text-decoration: none;
     color: var(--light);
     font-family: 'Telegraf-Ultralight';
@@ -142,6 +169,15 @@ a.linkout:hover {
 
 
 @media screen and (min-width: 900px) {
+    .tag-filters {
+        gap: 1dvw;
+    }
+
+    .filter-tag {
+        font-size: 1.25vw;
+        padding: 1vh 1vw;
+    }
+
     .count {
         font-size: 3vw;
         padding: 2.5vh 2.5vw;

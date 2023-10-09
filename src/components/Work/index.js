@@ -39,7 +39,7 @@ function Work () {
         {
             name: "DECENTRALIZED HARDWARE",
             images: ['hardware-01.png', 'hardware-02.png', 'hardware-03.png', 'hardware-04.png', 'hardware-05.png'],
-            tags: ['Design', '3D', 'Fabrication'],
+            tags: ['Design', '3D', 'Physical'],
             copy: 'A 3D-printed prototype for garment hardware that allows end-users to produce parts from anywhere in the world in single unit production. The prototype is SLS printed Nylon12 and utilizes an SLM printed aluminum press that universally fits soldering irons to secure the hardware.',
             link: 'https://www.instagram.com/p/CndLiR6PNWl/'
         },
@@ -67,14 +67,14 @@ function Work () {
         {
             name: 'LGS STUDIO',
             images: ['lgs-01.png', 'lgs-02.png', 'lgs-03.png', 'lgs-04.png', 'lgs-techsheet.png', 'lgs-packaging.png'],
-            tags: ['3D', 'Design', 'Fabrication'],
+            tags: ['3D', 'Design', 'Physical'],
             copy: 'I worked as visual designer for LA-based ceramic studios, LGS, rendering client projects, delivering wiring technical sheets, and designing custom tooling. Client work included lighting for Nicole Hollis, and packaging for a collaboration with Seth Rogens homegoods brand, HousePlant.',
             link: 'https://www.lgsstudio.com'
         },
         {
             name: 'MULTNOMAH DRUG',
             images: ['garageshot.png', 'product-page.png', 'hero-shot.png', 'packaging.png'],
-            tags: ['Design', 'Dev', 'Apparel'],
+            tags: ['Design', 'Dev', 'Physical'],
             copy: 'In the summer of 2020, I designed, manufactured, and distributed over 3000 masks with the help of local manufacturers and a houseless advocacy agency. The masks featured a single layer of technical fabric, laser-cut and sewn with minimal processing for rapid production.',
             link: 'https://www.instagram.com/multnomahdrug/',
         },
@@ -87,12 +87,48 @@ function Work () {
         }
     ])
 
+    // State to hold selected tags
+    const [selectedTags, setSelectedTags] = useState([]);
+
+    // Get all unique tags from the projects
+    const allTags = [...new Set(Projects.flatMap(project => project.tags))];
+
+    const handleTagClick = (tag) => {
+        if (selectedTags.includes(tag)) {
+            setSelectedTags(prev => prev.filter(t => t !== tag));
+        } else {
+            setSelectedTags(prev => [...prev, tag]);
+        }
+    }
+
+    // Filtered projects based on selected tags
+    const filteredProjects = Projects.filter(project => {
+        if (selectedTags.length === 0) return true;
+        return selectedTags.some(tag => project.tags.includes(tag));
+    });
+
+    // Clear tags function
+    const clearTags = () => {
+        setSelectedTags([]);
+    }
+
     const workRef = useRef();
 
     // Case Loading Animations
     useEffect(() => {      
         let ctx = gsap.context(() => {
                 let tl = gsap.timeline({});
+                    tl.from('.tag-filters', {
+                        scaleX: 0,
+                        duration: 1,
+                        ease: 'power4.inOut'
+                    });
+                    tl.from('.filter-tag', {
+                        opacity: 0,
+                        duration: 1,
+                        ease: 'power3.inOut',
+                        stagger: 0.25,
+                    });
                     tl.from('.header', {
                         scaleX: 0,
                         duration: 1,
@@ -133,10 +169,16 @@ function Work () {
 
     return (
         <div className='work' ref={workRef}>
-            {Projects.map((project, index) => (
+            <div className="tag-filters">
+                {allTags.map((tag, index) => (
+                    <div key={index} className={`filter-tag ${selectedTags.includes(tag) ? 'selected' : ''}`} onClick={() => handleTagClick(tag)}>{tag}</div>
+                ))}
+                {selectedTags.length > 0 && <div className='filter-tag selected' onClick={clearTags}>Clear All</div>}
+            </div>
+            {filteredProjects.map((project, index) => (
                     <div className='case' key={index}>
                         <div className='header'>
-                            <div className='count'>0{index +1}</div>
+                            <div className='count'>{index +1}</div>
                             <div className='title'>{project.name}</div>
                         </div>
                         <div className='content'>
@@ -154,7 +196,7 @@ function Work () {
                                     ))}
                                 </div>
                                 <div className='copy'>{project.copy}</div>
-                                <div className='link-box'><a className='linkout' href={project.link} target="_blank" rel="noopener noreferrer">view live case →</a></div>
+                                <div className='link-box'><a className='linkout' href={project.link} target="_blank" rel="noopener noreferrer">view live project →</a></div>
                             </div>
                         </div>
                     </div>
