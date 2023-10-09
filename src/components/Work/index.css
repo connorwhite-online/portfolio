@@ -49,10 +49,6 @@ html, body {
     background-color: var(--light);
 }
 
-.filter-tag:hover {
-    background-color: var(--button);
-}
-
 .case {
     display: flex;
     flex-direction: column;
@@ -162,12 +158,6 @@ a.linkout {
     font-size: 4vw;
 }
 
-a.linkout:hover {
-    background-color: var(--button);
-}
-
-
-
 @media screen and (min-width: 900px) {
     .tag-filters {
         gap: 1dvw;
@@ -176,6 +166,10 @@ a.linkout:hover {
     .filter-tag {
         font-size: 1.25vw;
         padding: 1vh 1vw;
+    }
+
+    .filter-tag:hover {
+        background-color: var(--button);
     }
 
     .count {
@@ -239,6 +233,10 @@ a.linkout:hover {
     a.linkout {
         font-size: 1.25vw;
         padding: inherit;
+    }
+
+    a.linkout:hover {
+        background-color: var(--button);
     }
 }
 
