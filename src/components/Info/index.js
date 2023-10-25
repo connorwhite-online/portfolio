@@ -30,27 +30,31 @@ function Info () {
             boxes.forEach((box, i) => {
                 gsap.fromTo(box, {
                     // scaleX: 0,
-                    clipPath: 'inset(0 0 100% 0)',
+                    opacity: 0,
+                    scale: 0,
+                    // clipPath: 'inset(0 0 100% 0)',
                 }, {
                     // scaleX: 1,
-                    clipPath: 'inset(0 0 0% 0)',
-                    duration: 1,
-                    delay: i*.5,
-                    ease: 'power4.inOut',
-                })
-            });
-            links.forEach((link, i) => {
-                gsap.fromTo(link, {
-                    opacity: 0,
-                    y: 50,
-                }, {
                     opacity: 1,
-                    y: 0,
+                    // clipPath: 'inset(0 0 0% 0)',
+                    scale: 1,
                     duration: 1,
-                    delay: i*.5,
+                    delay: i*.25,
                     ease: 'power4.inOut',
                 })
             });
+            // links.forEach((link, i) => {
+            //     gsap.fromTo(link, {
+            //         opacity: 0,
+            //         y: 50,
+            //     }, {
+            //         opacity: 1,
+            //         y: 0,
+            //         duration: 1,
+            //         delay: i*.5,
+            //         ease: 'power4.inOut',
+            //     })
+            // });
         }, infoRef)
         return () => ctx.revert();
     }, []);
