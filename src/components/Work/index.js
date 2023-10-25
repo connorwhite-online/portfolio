@@ -31,14 +31,14 @@ function Work () {
         },
         {
             name: 'IN NO PARTICULAR ORDER',
-            images: ['inpo-01.png', 'inpo-02.png', 'inpo-03.png', 'inpo-04.png', 'inpo-05.png', 'inpo-06.png'],
+            images: ['inpo-01.mp4', 'inpo-01.png', 'inpo-02.png', 'inpo-03.png', 'inpo-04.png', 'inpo-05.png', 'inpo-06.png'],
             tags: ['Design', 'Dev', '3D'],
             copy: 'A custom Tumblr design and build celebrating the third edition of In No Particular Order, a photojournal by designer and creative director Sean Brown.',
             link: 'https://byseanbrown.tumblr.com/'
         },
         {
             name: "DECENTRALIZED HARDWARE",
-            images: ['hardware-01.png', 'hardware-02.png', 'hardware-03.png', 'hardware-04.png', 'hardware-05.png'],
+            images: ['hardware-01.mp4', 'hardware-01.png', 'hardware-05.png'],
             tags: ['Design', '3D', 'Physical'],
             copy: 'A 3D-printed prototype for garment hardware that allows end-users to produce parts from anywhere in the world in single unit production. The prototype is SLS printed Nylon12 and utilizes an SLM printed aluminum press that universally fits soldering irons to secure the hardware.',
             link: 'https://www.instagram.com/p/CndLiR6PNWl/'
@@ -150,7 +150,7 @@ function Work () {
                         duration: 1,
                         ease: 'power3.inOut',
                     });
-                    tl.from('.copy, .link-box', {
+                    tl.from('.copy, .link-container', {
                         opacity: 0,
                         duration: 1,
                         ease: 'power3.inOut',
@@ -205,7 +205,7 @@ function Work () {
                                     ))}
                                 </div>
                                 <div className='copy'>{project.copy}</div>
-                                <div className='link-box'><a className='linkout' href={project.link} target="_blank" rel="noopener noreferrer">view live project →</a></div>
+                                <div className='link-container'><a className='linkout' href={project.link} target="_blank" rel="noopener noreferrer">view live project →</a></div>
                             </div>
                         </div>
                     </div>

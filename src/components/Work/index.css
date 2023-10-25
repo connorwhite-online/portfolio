@@ -143,7 +143,7 @@ html, body {
     padding-bottom: 5vh;
 }
 
-.link-box {
+.link-container {
     align-self: center;
     padding: 1vh 3vw;
 }
@@ -226,7 +226,7 @@ a.linkout {
         font-size: 1.25vw;
     }
 
-    .link-box {
+    .link-container {
         padding: 1vh 2vw;
     }
     
