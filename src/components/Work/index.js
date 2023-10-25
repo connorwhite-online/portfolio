@@ -24,7 +24,7 @@ function Work () {
         },
         {
             name: 'MANIPULATE',
-            images: ['manipulate-01.png', 'manipulate-02.png', 'manipulate-03.png', 'manipulate-04.png'],
+            images: ['manipulate.mp4', 'manipulate-01.png', 'manipulate-02.png', 'manipulate-03.png', 'manipulate-04.png'],
             tags: ['Machine Learning', '3D', 'Dev'],
             copy: 'A machine learning experiment that allows users to manipulate 3D objects with their hands. The project uses hand tracking to detect the position of the users hands and maps the position to the rotation of the 3D object. Built with React, three.js, and Tensorflow.js.',
             link: 'https://twitter.com/connor_online/status/1650968335750942722'
@@ -125,6 +125,7 @@ function Work () {
                     });
                     tl.from('.filter-tag', {
                         opacity: 0,
+                        scale: 0.75,
                         duration: 1,
                         ease: 'power3.inOut',
                         stagger: 0.25,
