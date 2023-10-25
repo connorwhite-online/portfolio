@@ -37,6 +37,14 @@ html, body {
     color: var(--light);
 }
 
+.status {
+    width: 75dvw;
+    font-family: 'Telegraf-Regular';
+    font-size: 4vw;
+    color: var(--light);
+    text-align: center;
+}
+
 .link-group {
     width: 25vw;
     display: flex;
@@ -56,14 +64,24 @@ div a.link {
     .bio {
         font-size: 2.5vw;
     }
+
+    .status {
+        width: 50dvw;
+        font-family: 'Telegraf-Regular';
+        font-size: 1.25vw;
+        color: var(--light);
+    }
     
     .link-group {
-        gap: 2vw;
+        gap: 0vw;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 900px) {
 .bio {
     font-size: 3vw;
+}
+.status {
+    font-size: 1.75vw;
 }
 }

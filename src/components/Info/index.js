@@ -61,6 +61,9 @@ function Info () {
             <div className='bio'>
                 Connect with me
             </div>
+            <div className='status'>
+                I currently have availabilty for new projects, contracts, or full time roles. If you have something in mind or just want to connect, reach out however you prefer!
+                </div>
             <div className='link-group'>
                 <div className='link-box'><a href="mailto:connorwhitepdx@gmail.com" className='link'><EmailIcon /></a></div>
                 <div className='link-box'><a href="https://www.github.com/connorwhite-online" target="_blank" rel="noopener noreferrer" className='link'><GitHubIcon /></a></div>
