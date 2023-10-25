@@ -9,18 +9,18 @@ function Work () {
     // Project Directory
     const [Projects] = useState([
         {
-            name: 'INITIAL THOUGHTS',
-            images: ['oit.png'],
-            tags: ['Design', 'Dev'],
-            copy: 'Agency landing page for Initial Thoughts, a creative strategy and design studio based in Toronto. I designed the site and built it using React and GSAP.',
-            link: 'https://ourinitialthoughts.com'
-        },
-        {
             name: 'SQ FT',
-            images: ['sqft-01.png', 'sqft-02.png', 'sqft-03.png', 'sqft-04.png', 'sqft-05.png'],
+            images: ['sqft-01.mp4', 'sqft-02.png', 'sqft-03.png'],
             tags: ['Design', 'Dev', '3D', 'Shopify'],
             copy: 'E-com site for the launch of SQ FT Magazine, from designer and tastemaker Sean Brown. The site features a Shopify backend and an interactive 3D model of the magazine that reacts to the user cursor.',
             link: 'https://readsqft.com/'
+        },
+        {
+            name: 'INITIAL THOUGHTS',
+            images: ['oit-01.mp4', 'oit-02.png', 'oit-03.png'],
+            tags: ['Design', 'Dev'],
+            copy: 'Agency landing page for Initial Thoughts, a creative strategy and design studio based in Toronto. I designed the site and built it using React and GSAP.',
+            link: 'https://ourinitialthoughts.com'
         },
         {
             name: 'MANIPULATE',
@@ -184,9 +184,18 @@ function Work () {
                         <div className='content'>
                             <div className='gallery'>
                                 <div className='images'>
-                                    {project.images.map((img, i) => (
-                                        <img className='gallery-img' src={'./images/' + img} key={i} alt={project.name + ' ' + i} width={screenWidth <= 749 ? 300 : 800} height={screenWidth <= 749 ? 300 : 800}></img>
-                                    ))}
+                                {project.images.map((media, i) => {
+                                    const extension = media.split('.').pop().toLowerCase();
+
+                                    return extension === 'png' || extension === 'jpg' || extension === 'jpeg' || extension === 'gif'
+                                    ? <img className='gallery-img' src={'./images/' + media} key={i} alt={project.name + ' ' + i} width={screenWidth <= 749 ? 300 : 800} height={screenWidth <= 749 ? 300 : 800} />
+                                    : (extension === 'mp4' || extension === 'mov')
+                                    ? <video className='gallery-img' width={screenWidth <= 749 ? 300 : 800} height={screenWidth <= 749 ? 300 : 800} autoPlay loop muted playsInline key={i}>
+                                        <source src={'./images/' + media} type={`video/${extension}`} />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    : null
+                                })}
                                 </div> 
                             </div>
                             <div className='details'>
