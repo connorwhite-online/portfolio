@@ -19,7 +19,7 @@ function Work () {
             name: 'INITIAL THOUGHTS',
             images: ['oit-01.mp4', 'oit-02.png', 'oit-03.png'],
             tags: ['Design', 'Dev'],
-            copy: 'Agency landing page for Initial Thoughts, a creative strategy and design studio based in Toronto. I designed the site and built it using React and GSAP.',
+            copy: 'Agency landing page for Initial Thoughts, a creative strategy and design studio with clients ranging from SZA to Ciroc. I designed the site based on a portfolio layout from Désirée Deleau and built it using React and GSAP.',
             link: 'https://ourinitialthoughts.com'
         },
         {
