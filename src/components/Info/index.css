@@ -53,6 +53,8 @@ html, body {
 }
 
 .link-box {
+    padding: 0vw;
+    align-items: center;
     clip-path: inset(0);
 }
 
@@ -73,7 +75,7 @@ div a.link {
     }
     
     .link-group {
-        gap: 0vw;
+        gap: 2vw;
     }
 }
 
