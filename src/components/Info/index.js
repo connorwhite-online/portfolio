@@ -16,13 +16,23 @@ function Info () {
     useEffect(() => {
 
         const boxes = gsap.utils.toArray('.link-box');
-        const links = gsap.utils.toArray('.link');
+
         let ctx = gsap.context(() => {
             gsap.fromTo('.bio', {
+                opacity: 0,
+                clipPath: 'inset(0 100% 0 0)',
+            }, {
+                clipPath: 'inset(0 0% 0 0)',
+                opacity: 1,
+                duration: 1,
+                ease: 'power3.inOut',
+            });
+            gsap.fromTo('.status', {
                 opacity: 0,
                 clipPath: 'inset(0 0 100% 0)',
             }, {
                 clipPath: 'inset(0 0 0% 0)',
+                delay: .5,
                 opacity: 1,
                 duration: 1,
                 ease: 'power3.inOut',
@@ -43,18 +53,6 @@ function Info () {
                     ease: 'power4.inOut',
                 })
             });
-            // links.forEach((link, i) => {
-            //     gsap.fromTo(link, {
-            //         opacity: 0,
-            //         y: 50,
-            //     }, {
-            //         opacity: 1,
-            //         y: 0,
-            //         duration: 1,
-            //         delay: i*.5,
-            //         ease: 'power4.inOut',
-            //     })
-            // });
         }, infoRef)
         return () => ctx.revert();
     }, []);
@@ -63,10 +61,10 @@ function Info () {
     return (
         <div className='info' ref={infoRef}>
             <div className='bio'>
-                Connect with me
+                Interactive Art Director, Designer, and Developer
             </div>
             <div className='status'>
-                I currently have availabilty for new projects, contracts, or full time roles. If you have something in mind or just want to connect, reach out however you prefer!
+                I currently have availabilty for new projects, contracts, or full time roles. If you have something in mind or just want to connect, reach out however you prefer to do so!
                 </div>
             <div className='link-group'>
                 <div className='link-box'><a href="mailto:connorwhitepdx@gmail.com" className='link'><EmailIcon /></a></div>
