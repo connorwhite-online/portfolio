@@ -9,6 +9,13 @@ function Work () {
     // Project Directory
     const [Projects] = useState([
         {
+            name: 'Blackbird',
+            images: ['blackbird-01.mp4', 'blackbird-02.png', 'blackbird-03.png', 'blackbird-04.png', 'blackbird-05.png'],
+            tags: ['3D', 'Design', 'iOS'],
+            copy: '3D assets for Web3 restaurant loyalty app Blackbird. I designed and modeled the tokens, and created custom metal materials optiimized for glTF export so they could be deployed in various UX scenarios throughout the iOS app.',
+            link: 'https://www.blackbird.xyz/'
+        },
+        {
             name: 'SQ FT',
             images: ['sqft-01.mp4', 'sqft-02.png', 'sqft-03.png'],
             tags: ['Design', 'Dev', '3D', 'Shopify'],
