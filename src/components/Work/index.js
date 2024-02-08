@@ -184,7 +184,7 @@ function Work () {
                 {selectedTags.length > 0 && <div className='filter-tag selected' onClick={clearTags}>Clear All</div>}
             </div>
             {filteredProjects.map((project, index) => (
-                    <div className='case' key={index}>
+                    <div className='case' key={project.name}>
                         <div className='header'>
                             <div className='count'>{index +1}</div>
                             <div className='title'>{project.name}</div>
